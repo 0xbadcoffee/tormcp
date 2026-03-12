@@ -1,0 +1,35 @@
+{
+	"name": "tor-mcp",
+	"version": "0.1.0",
+	"description": "Tor search MCP - unbiased onion search via Torch and Ahmia with filtered/unfiltered modes",
+	"type": "module",
+	"main": "dist/src/server.js",
+	"bin": {
+		"tor-mcp": "dist/src/server.js"
+	},
+	"scripts": {
+		"build": "tsc",
+		"start": "node dist/src/server.js",
+		"inspector": "pnpm dlx @modelcontextprotocol/inspector node dist/src/server.js",
+		"postinstall": "node scripts/downloadTor.cjs",
+		"dev": "tsc --watch",
+		"lint": "biome lint .",
+		"format": "biome format --write .",
+		"check": "biome check --write ."
+	},
+	"engines": {
+		"node": ">=18"
+	},
+	"dependencies": {
+		"@modelcontextprotocol/sdk": "^1.27.1",
+		"cheerio": "^1.2.0",
+		"socks-proxy-agent": "^8.0.5",
+		"zod": "^3.25.76"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.6",
+		"@types/node": "^20.0.0",
+		"tar": "^7.5.11",
+		"typescript": "^5.3.0"
+	}
+}
