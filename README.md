@@ -59,14 +59,6 @@ pnpm run inspector
 
 This starts the MCP Inspector with the correct server path (`dist/src/server.js`). Open the URL it prints in the browser to list and call tools (e.g. `tor_search`, `tor_status`). Do not use `dist/server.js`; the built entry is `dist/src/server.js`.
 
-## Testing in Cursor
-
-1. Build the project: `pnpm build`
-2. Open this folder in Cursor as the workspace root (so `.cursor/mcp.json` is used).
-3. Reload Cursor or restart the MCP servers (Settings > MCP, or reload window).
-4. The **tor-mcp** server runs via `node dist/src/server.js` from the project root. Ensure Tor is running on `127.0.0.1:9050` if you call the tools.
-5. In chat, ask the AI to use `tor_search`, `tor_fetch`, `tor_crawl`, or `tor_status`.
-
 ## MCP Tools
 
 | Tool        | Description |
